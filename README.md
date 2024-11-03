@@ -1,5 +1,13 @@
 # Welcome to your Expo app 👋
 
+# Safeher
+
+A comprehensive mobile application built to detect voice input by a user and determine if the output represents a violent encounter , hostile or potentially threatning situation to the user based on the content of the conversations recorded (translated by gtp 3.5 turbo api) and through the tone of voices recorded (to determine the mental/emotional state of the speaker) with the use of our own model inspired by https://www.kaggle.com/code/eward96/speech-emotion-detection#visual  and trained on a new dataset present in the previous link.
+The output of this pipline concludes by an sos signal sent through an sms in the case of a violent encounter.
+
+![image](https://github.com/user-attachments/assets/8ac1d767-6f1c-4342-8b81-d55f21737368)
+
+
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
@@ -34,6 +42,16 @@ npm run reset-project
 ```
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+
+
+### AI model
+https://colab.research.google.com/drive/179kwk21_rG7qzeeqJ88imb0aruc0xQCe?usp=sharing
+
+This project explores speech emotion detection using a deep learning model implemented in Keras. Inspired by the work available on Kaggle by eward96, this notebook adapts and customizes the methodology to suit the Toronto Emotional Speech Set (TESS), specifically the OAF subset. The TESS dataset comprises 1000 .wav audio files, representing 5 distinct emotions, with each emotion containing 200 samples. The model architecture, a convolutional neural network (CNN), leverages multiple Conv1D and MaxPooling1D layers, followed by dense layers with dropout for improved generalization. The model is compiled using categorical cross-entropy loss and optimized with RMSprop for efficient training. This adaptation aims to provide robust emotion classification from audio signals with high accuracy.
+
+![image](https://github.com/user-attachments/assets/38dd4070-f48c-4cb6-a181-5787b19123f7)
+
+
 
 ## Learn more
 
