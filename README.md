@@ -7,9 +7,9 @@ A comprehensive mobile application built to detect voice input by a user and det
 
 The output of this pipline concludes by an sos signal sent through an sms in the case of a violent encounter.
 
-![image](https://github.com/user-attachments/assets/8ac1d767-6f1c-4342-8b81-d55f21737368)
+<img src="https://github.com/user-attachments/assets/8ac1d767-6f1c-4342-8b81-d55f21737368" alt="image" width="400"/>
 
-![image](https://github.com/user-attachments/assets/28b00a66-84fe-42a6-a5a4-02992ff2d56d)
+<img src="https://github.com/user-attachments/assets/28b00a66-84fe-42a6-a5a4-02992ff2d56d" alt="image" width="400"/>
 
 
 
