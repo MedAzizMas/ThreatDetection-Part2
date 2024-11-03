@@ -10,6 +10,9 @@ from tensorflow.keras.models import load_model
 import pickle
 import warnings
 import logging
+from dotenv import load_dotenv
+
+load_dotenv()
 
 ##### start of emotion detection 
 
@@ -121,9 +124,9 @@ def emotion_detection():
     }
     
     # Setup paths
-    model_path = 'C:\\Users\\moham\\Desktop\\emotion_voice\\emotion_model.h5'
-    encoder_path = 'C:\\Users\\moham\\Desktop\\emotion_voice\\label_encoder.pkl'
-    test_file = "C:\\Users\\moham\\Desktop\\threat_detection\\recordings\\latest_recording.wav"
+    model_path = os.getenv('MODEL_PATH')
+    encoder_path = os.getenv('ENCODER_PATH')
+    test_file = os.getenv('RECORDING_PATH')
 
     # Load models
     loaded_model, loaded_le = load_models(model_path, encoder_path)
@@ -158,13 +161,13 @@ result = emotion_detection()
 
 
 # Initialize the OpenAI client
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
-# Add these constants at the top of your file with other imports
-TWILIO_ACCOUNT_SID = 'ACf5c3c3ba1ef4e0ab78b17710eb7be73f'
-TWILIO_AUTH_TOKEN = 'b2a5774d5856871a8408a477ec002960'  # Replace with your actual auth token
-TWILIO_MESSAGING_SERVICE_SID = 'MG2ebf5dc6b7a42ce754d9cb3f27d47d83'
-TO_PHONE_NUMBER = '+21693359384'
+# Replace Twilio constants
+TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')
+TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
+TWILIO_MESSAGING_SERVICE_SID = os.getenv('TWILIO_MESSAGING_SERVICE_SID')
+TO_PHONE_NUMBER = os.getenv('TWILIO_TO_PHONE_NUMBER')
 
 def send_twilio_message(message):
     client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
@@ -215,7 +218,7 @@ def transcribe_audio(audio_file_path):
         }
 
         headers = {
-            "x-rapidapi-key": "ca931ee097msh6bfb8e539c545bfp1b847ajsnda1cf939b904",
+            "x-rapidapi-key": os.getenv('RAPIDAPI_KEY'),
             "x-rapidapi-host": "openai-whisper-speech-to-text-api.p.rapidapi.com"
         }
 
