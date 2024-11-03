@@ -3,9 +3,14 @@
 # Safeher
 
 A comprehensive mobile application built to detect voice input by a user and determine if the output represents a violent encounter , hostile or potentially threatning situation to the user based on the content of the conversations recorded (translated by gtp 3.5 turbo api) and through the tone of voices recorded (to determine the mental/emotional state of the speaker) with the use of our own model inspired by https://www.kaggle.com/code/eward96/speech-emotion-detection#visual  and trained on a new dataset present in the previous link.
+![image](https://github.com/user-attachments/assets/4b7e475c-c176-4510-a5fa-492b83d9a44a)
+
 The output of this pipline concludes by an sos signal sent through an sms in the case of a violent encounter.
 
 ![image](https://github.com/user-attachments/assets/8ac1d767-6f1c-4342-8b81-d55f21737368)
+
+![image](https://github.com/user-attachments/assets/28b00a66-84fe-42a6-a5a4-02992ff2d56d)
+
 
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
@@ -52,6 +57,8 @@ This project explores speech emotion detection using a deep learning model imple
 ![image](https://github.com/user-attachments/assets/38dd4070-f48c-4cb6-a181-5787b19123f7)
 
 
+## Conclusion 
+Our solutions aims to prevent women from getting into dangerous situations and strives to get them help if they happen to get into one ; It's both a precaution and a solution.
 
 ## Learn more
 
